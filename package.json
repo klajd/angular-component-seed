@@ -1,0 +1,26 @@
+{
+  "name": "angular-component-seed",
+  "version": "0.0.1",
+  "description": "An Angular 1.x project seed for component developing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klajd/angular-component-seed.git"
+  },
+  "keywords": [
+    "angular",
+    "component",
+    "gulp",
+    "seed",
+    "structure"
+  ],
+  "author": "Klajd Diko <klajd.diko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klajd/angular-component-seed/issues"
+  },
+  "homepage": "https://github.com/klajd/angular-component-seed#readme"
+}
