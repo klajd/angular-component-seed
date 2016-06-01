@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/klajd/angular-component-seed/issues"
   },
-  "homepage": "https://github.com/klajd/angular-component-seed#readme"
+  "homepage": "https://github.com/klajd/angular-component-seed#readme",
+  "devDependencies": {
+    "angular-component-tasks": "0.0.1",
+    "gulp": "^3.9.1"
+  }
 }

@@ -1,0 +1,14 @@
+# node bower typings
+node_modules
+bower_components
+typings
+
+# editor
+.vscode
+
+# temp folder and files
+.temp
+*.log
+
+# ignore for now 
+dist
