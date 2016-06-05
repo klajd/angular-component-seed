@@ -24,4 +24,5 @@ gulp build
 
 ## Notes
 
-Install the demo dependecy as bower dev dependency using  `bower install --save-dev *`
+Install the demo dependecy as bower dev dependency using  `bower install --save-dev *`.  
+An example is angular-bootstrap that the this components does not depends on but the demo needs it to run.
