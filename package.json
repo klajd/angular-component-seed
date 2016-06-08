@@ -4,6 +4,8 @@
   "description": "An Angular 1.x project seed for component developing.",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,7 +17,8 @@
     "component",
     "gulp",
     "seed",
-    "structure"
+    "structure",
+    "project"
   ],
   "author": "Klajd Diko <klajd.diko@gmail.com>",
   "license": "MIT",
