@@ -4,37 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular Component Seed Demo</title>
-
-    <!-- build:css styles/lib.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css styles/app.css-->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- endbuild -->
-
 </head>
 
-<body>
+<body ng-app="app" ng-controller="AppController as vm" >
     <div>
-        this is a demo
+        <button ng-click="vm.log()">Log Data</button>
+        <div ng-repeat="log in vm.logs">{{log}}</div>
     </div>
-
-    <!-- build:js js/lib.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js js/app.js-->
-    <!-- inject:js -->
-    <!-- endinject -->
-
-    <!-- inject:templates:js -->
-    <!-- endinject -->
-
-    <!-- endbuild -->
 </body>
 
 </html>
