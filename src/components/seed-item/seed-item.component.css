@@ -1,0 +1,8 @@
+.seed .seed-item:hover {
+      cursor: pointer;
+}
+
+.seed .seed-item .fa-square-o,
+.seed .seed-item .fa-check-square-o {
+     margin-right: 10px;
+}

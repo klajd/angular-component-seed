@@ -1,0 +1,5 @@
+<a class="list-group-item seed-item" ng-class="{'active': $ctrl.ngModel.$selected}" ng-click="$ctrl.select()">
+      <i class="fa" ng-class="{'fa-check-square-o': $ctrl.ngModel.$selected, 'fa-square-o': !$ctrl.ngModel.$selected }"></i>
+      <i class="fa fa-leaf" ng-style="{color : $ctrl.ngModel.color}"></i>
+      <span ng-bind="$ctrl.ngModel.value"></span>
+</a>
