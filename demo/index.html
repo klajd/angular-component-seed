@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app" ng-controller="AppController as vm">
 
 <head>
     <meta charset="UTF-8">
-    <title>Angular Component Seed Demo</title>
+    <title>{{::vm.title}}</title>
 </head>
 
-<body ng-app="app" ng-controller="AppController as vm" >
-    <div>
-        <button ng-click="vm.log()">Log Data</button>
-        <div ng-repeat="log in vm.logs">{{log}}</div>
+<body ng-cloak>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" ng-click="collapse = !collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">{{::vm.title}}</a>
+            </div>
+            <div class="navbar-collapse collapse" uib-collapse="collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="menu in vm.tabs" ng-class="{active: $index === vm.active}">
+                        <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index">{{menu.title}}</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs" >
+                    <li><a href="#">{{vm.version}}</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container container-demo">
+        <ng-include src="vm.tabs[vm.active].template"></ng-include>
     </div>
+
 </body>
 
 </html>
