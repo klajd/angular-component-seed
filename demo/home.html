@@ -1,0 +1,11 @@
+<div ng-controller="HomeController as vm">
+    <div class="row">
+        <div class="col-md-3">
+            <seed ng-model="vm.seeds"></seed>
+        </div>
+        <div class="col-md-9">
+            <button class="btn btn-default" ng-click="vm.log()">Log Data</button>
+            <div ng-repeat="log in vm.logs">{{log}}</div>
+        </div>
+    </div>
+</div>
