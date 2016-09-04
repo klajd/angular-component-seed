@@ -21,18 +21,34 @@
         };
     }
 
-    AppController.$inject = ['$location', 'config'];
-    function AppController($location, config) {
+    AppController.$inject = ['$location', '$window', '$filter', 'config'];
+    function AppController($location, $window, $filter, config) {
         var vm = this;
         angular.extend(vm, config);
-        vm.active = 0;
+        vm.active = -1;
 
         vm.$onInit = function () {
+            console.log("Controller activated...");
             var path = $location.path().replace('/', '').replace(/-/g, ' ');
             var tab = vm.tabs.forEach(function (item, idx) {
                 if (item.title == path) vm.active = idx;
             });
+
+            if (vm.active === -1) {
+                path = $filter('titlecase')(vm.tabs[0].title);
+                $location.path(path);
+                vm.active = 0;
+            }
+
+            $window.onresize = fitContainerToWindowsHeight;
+
+            fitContainerToWindowsHeight();
         };
+
+        function fitContainerToWindowsHeight() {
+            var heights = window.innerHeight;
+            document.getElementsByClassName("container-demo")[0].style.minHeight = heights - 90 + "px";
+        }
     }
 
     TitlecaseFilter.$inject = [];
