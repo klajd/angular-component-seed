@@ -1,13 +1,15 @@
 body {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 30px;
-    background-color: rgb(245, 245, 245);
+    background-color: #ecf0f5;
 }
 
 .container-demo {
     padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #fff;
-    min-height: 800px;
+    border-top: 3px solid #d2d6de;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
