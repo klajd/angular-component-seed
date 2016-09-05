@@ -27,18 +27,30 @@ body {
     background-color:#3c8dbc;
 }
 
+.navbar-demo .navbar-toggle:hover, 
 .navbar-demo .navbar-nav > li.active > a,
 .navbar-demo .navbar-nav > li > a:hover {
     background-color:  #367fa9
 }
 
+.navbar-demo .navbar-toggle {
+    color:#fff;
+    border-color: #fff;    
+}
+
+.navbar-demo .navbar-toggle .icon-bar{
+    background-color: #fff;
+}
+
 .navbar-demo .navbar-nav > li > a {
     color:#fff;
 }
+
 .navbar-demo .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
     color: #fff;
     background-color:transparent;
 }
+
 .navbar-demo .navbar-brand {
     color:#fff;
 }
