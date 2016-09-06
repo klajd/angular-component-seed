@@ -25,7 +25,7 @@
                         <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index">{{menu.title}}</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right hidden-xs" >
+                <ul class="nav navbar-nav navbar-right hidden-xs">
                     <li><a href="#">{{vm.version}}</a></li>
                 </ul>
             </div>
@@ -36,6 +36,18 @@
     <div class="container container-demo">
         <ng-include src="vm.tabs[vm.active].template"></ng-include>
     </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <strong>{{::vm.copyright}}</strong> All rights reserved.
+        </div>
+    </footer>
+
+    <!--<footer class="footer">
+        <div class="container text-center">
+            <p class="text-muted">{{::vm.copyright}}</p>
+        </div>
+    </footer>-->
 
 </body>
 

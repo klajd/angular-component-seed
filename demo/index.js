@@ -14,6 +14,7 @@
         return {
             title: 'Angular Component Seed Demo',
             version: 'v0.0.2',
+            copyright: 'Copyright © 2016 Klajd Diko.',
             tabs: [
                 { title: 'Home', template: 'demo/home.html' },
                 { title: 'Docs', template: 'demo/docs.html' }
@@ -47,7 +48,7 @@
 
         function fitContainerToWindowsHeight() {
             var heights = window.innerHeight;
-            document.getElementsByClassName("container-demo")[0].style.minHeight = heights - 90 + "px";
+            document.getElementsByClassName("container-demo")[0].style.minHeight = heights - 100 + "px";
         }
     }
 
