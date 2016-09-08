@@ -19,7 +19,7 @@
                 </button>
                 <a class="navbar-brand" href="#">{{::vm.title}}</a>
             </div>
-            <div class="navbar-collapse collapse" uib-collapse="collapse">
+            <div class="navbar-collapse collapse" ng-class="{in : collapse}">
                 <ul class="nav navbar-nav">
                     <li ng-repeat="menu in vm.tabs" ng-class="{active: $index === vm.active}">
                         <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index">{{menu.title}}</a>

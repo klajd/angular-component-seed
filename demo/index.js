@@ -3,8 +3,7 @@
 
     angular
         .module('app', [
-            'component.seed',
-            'ui.bootstrap'
+            'component.seed'
         ])
         .controller('AppController', AppController)
         .filter('titlecase', TitlecaseFilter)
