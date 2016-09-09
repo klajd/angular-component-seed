@@ -7,6 +7,7 @@
         ])
         .controller('AppController', AppController)
         .filter('titlecase', TitlecaseFilter)
+        .directive('fitToWindowsHeight', FitToWindowsHeightDirective)
         .value('config', Config());
 
     function Config() {
@@ -39,16 +40,8 @@
                 $location.path(path);
                 vm.active = 0;
             }
-
-            $window.onresize = fitContainerToWindowsHeight;
-
-            fitContainerToWindowsHeight();
         };
 
-        function fitContainerToWindowsHeight() {
-            var heights = window.innerHeight;
-            document.getElementsByClassName("container-demo")[0].style.minHeight = heights - 100 + "px";
-        }
     }
 
     TitlecaseFilter.$inject = [];
@@ -56,6 +49,26 @@
         return function (value) {
             return value.replace(/\s/g, '-');
         };
+    }
+
+    FitToWindowsHeightDirective.$inject = ['$window'];
+    function FitToWindowsHeightDirective($window) {
+        return {
+            restrict: 'A',
+            link: link
+        };
+
+        function link(scope, element, attrs) {
+
+            $window.onresize = onWindowsResize;
+
+            onWindowsResize();
+
+            function onWindowsResize() {
+                var heights = window.innerHeight;
+                element[0].style.minHeight = heights - 100 + "px";
+            }
+        }
     }
 
 
