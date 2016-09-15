@@ -60,11 +60,11 @@
 
         function link(scope, element, attrs) {
 
-            $window.onresize = onWindowsResize;
+            $window.onresize = onWindowResize;
 
-            onWindowsResize();
+            onWindowResize();
 
-            function onWindowsResize() {
+            function onWindowResize() {
                 var heights = window.innerHeight;
                 element[0].style.minHeight = heights - 100 + "px";
             }
