@@ -22,7 +22,7 @@
             <div class="navbar-collapse collapse" ng-class="{in : vm.collapse}">
                 <ul class="nav navbar-nav">
                     <li ng-repeat="menu in vm.tabs" ng-class="{active: $index === vm.active}">
-                        <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index; vm.collapse = false">{{menu.title}}</a>
+                        <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index;">{{menu.title}}</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -33,7 +33,7 @@
         </div>
     </nav>
 
-    <div class="container container-demo" fit-to-windows-height>
+    <div class="container container-demo" fit-to-windows-height ng-click="vm.collapse = false;">
         <ng-include src="vm.tabs[vm.active].template"></ng-include>
     </div>
 

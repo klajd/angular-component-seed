@@ -5,7 +5,11 @@
         </div>
         <div class="col-md-9">
             <button class="btn btn-default" ng-click="vm.log()">Log Data</button>
-            <div ng-repeat="log in vm.logs">{{log}}</div>
+            <div ng-repeat="log in vm.logs">
+                <p>
+                    {{log}}
+                </p>
+            </div>
         </div>
     </div>
 </div>
