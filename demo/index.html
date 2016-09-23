@@ -8,7 +8,11 @@
 
 <body ng-cloak>
 
-    <nav class="navbar navbar-demo navbar-fixed-top">
+    <a href="{{vm.github}}">
+        <img class="fork-me hidden-xs" alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+    </a>
+
+    <nav class="navbar navbar-demo">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" ng-click="vm.collapse = !vm.collapse" aria-expanded="false" aria-controls="navbar">
@@ -24,6 +28,9 @@
                     <li ng-repeat="menu in vm.tabs" ng-class="{active: $index === vm.active}">
                         <a href="#{{menu.title | titlecase}}" ng-click="vm.active = $index;">{{menu.title}}</a>
                     </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right visible-xs">
+                    <li><a href="{{::vm.github}}">Github</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right hidden-xs">
                     <li><a href="#">{{vm.version}}</a></li>
@@ -42,6 +49,7 @@
             <strong>{{::vm.copyright}}</strong> All rights reserved.
         </div>
     </footer>
+
 
 </body>
 

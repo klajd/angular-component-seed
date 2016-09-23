@@ -2,34 +2,18 @@
     'use strict';
 
     angular
-        .module('app', [
-            'component.seed'
-        ])
+        .module('app', GLOBALS.modules)
         .controller('AppController', AppController)
         .filter('titlecase', TitlecaseFilter)
-        .directive('fitToWindowsHeight', FitToWindowsHeightDirective)
-        .value('config', Config());
+        .directive('fitToWindowsHeight', FitToWindowsHeightDirective);
 
-    function Config() {
-        return {
-            title: 'Angular Component Seed Demo',
-            version: 'v0.0.2',
-            copyright: 'Copyright © 2016 Klajd Diko.',
-            tabs: [
-                { title: 'Home', template: 'demo/home.html' },
-                { title: 'Docs', template: 'demo/docs.html' }
-            ]
-        };
-    }
-
-    AppController.$inject = ['$location', '$window', '$filter', 'config'];
-    function AppController($location, $window, $filter, config) {
+    AppController.$inject = ['$location', '$window', '$filter'];
+    function AppController($location, $window, $filter) {
         var vm = this;
-        angular.extend(vm, config);
+        angular.extend(vm, GLOBALS);
         vm.active = -1;
 
         vm.$onInit = function () {
-            console.log("Controller activated...");
             var path = $location.path().replace('/', '').replace(/-/g, ' ');
             var tab = vm.tabs.forEach(function (item, idx) {
                 if (item.title == path) vm.active = idx;
@@ -66,7 +50,7 @@
 
             function onWindowResize() {
                 var heights = window.innerHeight;
-                element[0].style.minHeight = heights - 100 + "px";
+                element[0].style.minHeight = heights - 112 + "px";
             }
         }
     }
