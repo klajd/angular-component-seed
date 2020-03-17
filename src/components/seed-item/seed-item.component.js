@@ -24,4 +24,5 @@
     $ctrl.$onChanges = function (bindings) { };
     $ctrl.$onDestory = function () { };
   }
+  
 })();
